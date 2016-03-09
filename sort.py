@@ -4,6 +4,52 @@ Created on Mar 9, 2016
 @author: sikarwar
 '''
 
+def _swap(a, i, j):
+    temp = a[i]
+    a[i] = a[j]
+    a[j] = temp
+
+def maxHepify(a, heapSize, i):
+    largest = i
+    left = i*2 + 1
+    right = i*2 + 2
+    
+    if left < heapSize and a[left] > a[i]:
+        largest = left
+    
+    if right < heapSize and a[right] > a[i]:
+        largest = right
+        
+    if largest != i:
+        _swap(a, largest, i)
+        maxHepify(a, heapSize, largest)
+
+def createAndBuildHeap(a):
+    heapSize = len(a)
+    
+    for i in range(int(heapSize/2), -1):
+        maxHepify(a, heapSize, i)
+    
+    return heapSize
+
+def heapSort(a):
+    heapSize = createAndBuildHeap(a)
+    
+    while(heapSize > 1):
+        _swap(a, 0, heapSize-1)
+        heapSize = heapSize - 1
+        maxHepify(a, heapSize, 0)
+        
+def heapSort_test():
+    a = [12, 11, 13, 5, 6, 7]
+    heapSort(a)
+    print(a)
+    
+    
+    
+    
+
+
 def mergeSort(a, p, r):
     
     if p < r:
@@ -58,5 +104,5 @@ def mergesort_test():
     
 
 if __name__ == '__main__':
-    mergesort_test()
-    
+    #mergesort_test()
+    heapSort_test()
