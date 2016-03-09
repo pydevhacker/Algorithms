@@ -9,6 +9,7 @@ def _swap(a, i, j):
     a[i] = a[j]
     a[j] = temp
 
+# O(n)
 def maxHepify(a, heapSize, i):
     largest = i
     left = i*2 + 1
@@ -24,6 +25,7 @@ def maxHepify(a, heapSize, i):
         _swap(a, largest, i)
         maxHepify(a, heapSize, largest)
 
+# O(log(n))
 def createAndBuildHeap(a):
     heapSize = len(a)
     
@@ -32,6 +34,7 @@ def createAndBuildHeap(a):
     
     return heapSize
 
+# O(n(log(n))
 def heapSort(a):
     heapSize = createAndBuildHeap(a)
     
@@ -49,7 +52,7 @@ def heapSort_test():
     
     
 
-
+# O(nlogn)
 def mergeSort(a, p, r):
     
     if p < r:

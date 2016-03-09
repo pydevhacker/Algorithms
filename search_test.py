@@ -29,8 +29,18 @@ def test_binarySearch_itr():
         print("Element is found at index :", result)
         
 
-        
+def test_interpolationSearch():
+    a = [2, 3, 4, 10, 40]
+    x = 10
+    
+    result = search.interpolationSearch(a, x)
+    
+    if result == -1:
+        print("Element is not found")
+    else:
+        print("Element is found at index :", result)        
 
 if __name__ == '__main__':
     #test_binarySearch()
-    test_binarySearch_itr()
+    #test_binarySearch_itr()
+    test_interpolationSearch()
