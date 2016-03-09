@@ -34,6 +34,21 @@ def binarySearch(a, l, r, x):
     
 '''
 binary search iterative
+http://geeksquiz.com/binary-search/
 '''
    
-def binarySearch(a, x):
+def binarySearch_itr(a, l, r, x):
+    
+    while r >= l:
+        
+        mid = int(l + (r-l)/2)
+        
+        if x == a[mid]:
+            return mid
+        elif x < a[mid]:
+            r = mid-1
+        else:
+            l = mid+1
+            
+    return -1
+    
