@@ -14,10 +14,10 @@ def maxHepify(a, heapSize, i):
     left = i*2 + 1
     right = i*2 + 2
     
-    if left < heapSize and a[left] > a[i]:
+    if left < heapSize and a[left] > a[largest]:
         largest = left
     
-    if right < heapSize and a[right] > a[i]:
+    if right < heapSize and a[right] > a[largest]:
         largest = right
         
     if largest != i:
@@ -27,7 +27,7 @@ def maxHepify(a, heapSize, i):
 def createAndBuildHeap(a):
     heapSize = len(a)
     
-    for i in range(int(heapSize/2), -1):
+    for i in range(int(heapSize/2), -1, -1):
         maxHepify(a, heapSize, i)
     
     return heapSize
