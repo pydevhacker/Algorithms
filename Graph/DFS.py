@@ -1,32 +1,32 @@
 '''
-Created on Mar 9, 2016
+Created on Mar 10, 2016
 
 @author: sikarwar
 '''
+
 from Algorithms.Graph.Graph import Graph
 
-# O(V+E)
-def BFS(g, s):
-    path = []
+def DFS(g, s):
     visited = [False]*g.size()
-    queue = []
-    queue.append(s)
-    visited[s] = True
     
-    while len(queue)!= 0:
-        s = queue.pop(0)
-        path.append(s)
-        visited[s] = True
-        #get child
-        childs = g.childs(s)
+    stack = []
+    stack.append(s)
+    path = []
+    
+    while len(stack) != 0:
+        e = stack.pop()
+        visited[e] = True
+        path.append(e)
+        #getChilds
+        childs = g.childs(e)
         for c in childs:
             if visited[c] == False:
-                queue.append(c)
+                stack.append(c)
                 
     
     print("Path : ", path)
-                
-def test_BFS():
+    
+def test_DFS():
     g = Graph(4)
     
     g.addEdge(0, 1)
@@ -36,7 +36,7 @@ def test_BFS():
     g.addEdge(2, 3)
     g.addEdge(3, 3)
     
-    BFS(g, 2)
+    DFS(g, 2)
     
 if __name__ == '__main__':
-    test_BFS()
+    test_DFS()
