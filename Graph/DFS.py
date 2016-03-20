@@ -4,7 +4,7 @@ Created on Mar 10, 2016
 @author: sikarwar
 '''
 
-from Algorithms.Graph.Graph import Graph
+from Graph import Graph
 
 def DFS(g, s):
     visited = [False]*g.size()
