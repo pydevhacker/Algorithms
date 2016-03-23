@@ -3,7 +3,7 @@ Created on Mar 9, 2016
 
 @author: sikarwar
 '''
-from Algorithms.Graph.Graph import Graph
+from Graph import Graph
 
 # O(V+E)
 def BFS(g, s):

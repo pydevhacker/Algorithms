@@ -4,7 +4,3 @@ Algorithms
 
 # Sort.py
 
-## MergeSort
-
-### Application
-
