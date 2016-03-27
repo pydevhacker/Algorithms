@@ -18,7 +18,7 @@ def DFS(g, s):
         visited[e] = True
         path.append(e)
         #getChilds
-        childs = g.childs(e)
+        childs = g.children(e)
         for c in childs:
             if visited[c] == False:
                 stack.append(c)

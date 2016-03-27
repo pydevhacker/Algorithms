@@ -18,7 +18,7 @@ def BFS(g, s):
         path.append(s)
         visited[s] = True
         #get child
-        childs = g.childs(s)
+        childs = g.children(s)
         for c in childs:
             if visited[c] == False:
                 queue.append(c)

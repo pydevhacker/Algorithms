@@ -6,12 +6,10 @@ Created on Mar 9, 2016
 
 class Graph:
     def __init__(self, nodes=0):
-        self.n = set()
+        self.n = set(range(nodes))
         self.g = {}
         self.e = set()
         self.w = {}
-
-
 
     def add(self, a, b, weight):
         self.g.setdefault(a, [])
@@ -29,7 +27,7 @@ class Graph:
                 return self.w[(t, f)]
         return 0
 
-    def add_edge(self, f, t, w=0, undirected=False):
+    def addEdge(self, f, t, w=0, undirected=False):
         self.add(f, t, w)
 
         self.n.add(f)

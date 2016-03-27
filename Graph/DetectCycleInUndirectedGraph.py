@@ -34,11 +34,11 @@ def cycleUtil(g, visited, n):
     return False
 
 g = Graph()
-g.add_edge(1, 0)
-g.add_edge(0, 2)
-g.add_edge(2, 0)
-g.add_edge(0, 3)
-g.add_edge(3, 4)
+g.addEdge(1, 0)
+g.addEdge(0, 2)
+g.addEdge(2, 0)
+g.addEdge(0, 3)
+g.addEdge(3, 4)
 
 if iscycle(g) is True:
     print("Graph contains cycle")
@@ -46,8 +46,8 @@ else:
     print("Graph does not contain cycle")
 
 g = Graph()
-g.add_edge(0, 1)
-g.add_edge(1, 2)
+g.addEdge(0, 1)
+g.addEdge(1, 2)
 
 if iscycle(g) is True:
     print("Graph contains cycle")

@@ -31,9 +31,9 @@ def isCycle(g):
     return False
 
 g = Graph(3)
-g.add_edge(0, 1)
-g.add_edge(1, 2)
-g.add_edge(0, 2)
+g.addEdge(0, 1)
+g.addEdge(1, 2)
+g.addEdge(0, 2)
 
 if isCycle(g) is True:
     print("Graph Contains Cycle")

@@ -1,6 +1,0 @@
-# Algorithms
-
-Algorithms
-
-# Sort.py
-
