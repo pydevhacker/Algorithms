@@ -2,8 +2,6 @@
 Merge two sorted linked lists such that merged list is in reverse order
 '''
 
-from LinkedList import LinkedList
-
 def merge(l1, l2):
     res = list()
     if len(l1) == 0:

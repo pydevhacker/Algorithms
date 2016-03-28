@@ -1,3 +1,4 @@
+
 class Node:
 
     def __init__(self, data):
@@ -99,13 +100,26 @@ class LinkedList:
         return 1 + self.count_rec_helper(node.next)
 
 
-    def print_list(self):
+    def print_list(self, text = ''):
         temp = self.head
+        print(text, end="  ")
         while temp:
-            print(temp.data,)
+            print(temp.data, end= ' ')
             temp = temp.next
+        print('\n')
 
-if __name__ == '__main__':
+    def reverse(self):
+        prev = None
+        cur = self.head
+        while cur is not None:
+            next = cur.next
+            cur.next = prev
+            prev = cur
+            cur = next
+        self.head = prev
+
+
+def test():
     lst = LinkedList()
     lst.append(6)
     lst.push(7)
@@ -123,3 +137,17 @@ if __name__ == '__main__':
     print("This is the new list")
     lst.print_list()
     print("Size", lst.count())
+
+def test_reverse():
+    lst = LinkedList()
+    lst.push(20)
+    lst.push(4)
+    lst.push(15)
+    lst.push(85)
+
+    lst.print_list("original")
+    lst.reverse()
+    lst.print_list("reversed")
+
+if __name__ == '__main__':
+    test_reverse()
