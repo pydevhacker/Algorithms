@@ -2,7 +2,7 @@
 
 '''
 
-from Graph import Graph
+from Graph import graph
 
 def topologicalSort(g):
 
@@ -34,7 +34,7 @@ def topologicalSort(g):
     return path
 
 if __name__ == '__main__':
-    g = Graph()
+    g = graph()
     g.addEdge(5, 2)
     g.addEdge(5, 0)
     g.addEdge(4, 0)

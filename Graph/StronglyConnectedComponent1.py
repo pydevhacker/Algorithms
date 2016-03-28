@@ -10,7 +10,7 @@ Kosaraju’s algorithm
 3) One by one pop a vertex from S while S is not empty. Let the popped vertex be ‘v’. Take v as source and do DFS (call DFSUtil(v)). The DFS starting from v prints strongly connected component of v.
 '''
 
-from Graph import Graph
+from Graph import graph
 
 
 def dfs(v, g, visited, scc):
@@ -22,7 +22,7 @@ def dfs(v, g, visited, scc):
 
 
 def reverse_graph(g):
-    new_graph = Graph(g.size())
+    new_graph = graph(g.size())
     for v in g.nodes():
         for c in g.children(v):
             new_graph.addEdge(c, v)
@@ -58,7 +58,7 @@ def strongly_connected_components(g):
             print(scc)
 
 
-g = Graph(5)
+g = graph(5)
 g.addEdge(1, 0)
 g.addEdge(0, 2)
 g.addEdge(2, 1)

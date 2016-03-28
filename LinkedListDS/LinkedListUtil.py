@@ -1,7 +1,7 @@
 
 
 def printNode(node):
-    print("List : ", end = " ")
+    print("Printing List : ", end = " ")
     while node is not None:
         print(node.data, end=" ")
         node = node.next

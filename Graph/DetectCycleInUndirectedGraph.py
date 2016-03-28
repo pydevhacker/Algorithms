@@ -6,7 +6,7 @@ Detect cycle in undirected graph.
         - O(E + V)
 '''
 
-from Graph import Graph
+from Graph import graph
 
 def iscycle(g):
     visited = [False]*g.size()
@@ -33,7 +33,7 @@ def cycleUtil(g, visited, n):
                 return True
     return False
 
-g = Graph()
+g = graph()
 g.addEdge(1, 0)
 g.addEdge(0, 2)
 g.addEdge(2, 0)
@@ -45,7 +45,7 @@ if iscycle(g) is True:
 else:
     print("Graph does not contain cycle")
 
-g = Graph()
+g = graph()
 g.addEdge(0, 1)
 g.addEdge(1, 2)
 

@@ -5,7 +5,7 @@ These methods can be improved to O(Logn) using Union by Rank or Height.
 
 Time Complexity : O(ELogV)
 '''
-from Graph import Graph
+from Graph import graph
 
 def find(parent, i):
     if parent[i] == -1:
@@ -30,7 +30,7 @@ def isCycle(g):
             return True
     return False
 
-g = Graph(3)
+g = graph(3)
 g.addEdge(0, 1)
 g.addEdge(1, 2)
 g.addEdge(0, 2)

@@ -1,6 +1,6 @@
 
 
-from Graph import Graph
+from Graph import graph
 
 def isCycle(g):
     n = g.size()
@@ -33,7 +33,7 @@ def isCycle(g):
                     path.pop()
     return (False, path)
 
-g = Graph(4)
+g = graph(4)
 
 g.addEdge(0, 1)
 g.addEdge(0, 2)

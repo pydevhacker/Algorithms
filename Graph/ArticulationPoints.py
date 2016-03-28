@@ -11,7 +11,7 @@ The idea is to use DFS (Depth First Search). In DFS, we follow vertices in tree 
 2) u is not root of DFS tree and it has a child v such that no vertex in subtree rooted with v has a back edge to one of the ancestors (in DFS tree) of u.
 '''
 
-from Graph import Graph
+from Graph import graph
 
 time = 0
 
@@ -56,7 +56,7 @@ def articulation_points(g):
 
 
 
-g1 = Graph(5)
+g1 = graph(5)
 g1.addEdge(1, 0)
 g1.addEdge(0, 2)
 g1.addEdge(2, 1)
@@ -64,13 +64,13 @@ g1.addEdge(0, 3)
 g1.addEdge(3, 4)
 articulation_points(g1)
 
-g2 = Graph(4)
+g2 = graph(4)
 g2.addEdge(0, 1)
 g2.addEdge(1, 2)
 g2.addEdge(2, 3)
 articulation_points(g2)
 
-g3 = Graph(7)
+g3 = graph(7)
 g3.addEdge(0, 1)
 g3.addEdge(1, 2)
 g3.addEdge(2, 0)

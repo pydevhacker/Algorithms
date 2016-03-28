@@ -4,7 +4,7 @@ Created on Mar 10, 2016
 @author: sikarwar
 '''
 
-from Graph import Graph
+from Graph import graph
 
 def DFS(g, s):
     visited = [False]*g.size()
@@ -27,7 +27,7 @@ def DFS(g, s):
     print("Path : ", path)
     
 def test_DFS():
-    g = Graph(4)
+    g = graph(4)
     
     g.addEdge(0, 1)
     g.addEdge(0, 2)

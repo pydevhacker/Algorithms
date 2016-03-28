@@ -3,7 +3,7 @@ Created on Mar 9, 2016
 
 @author: sikarwar
 '''
-from Graph import Graph
+from Graph import graph
 
 # O(V+E)
 def BFS(g, s):
@@ -27,7 +27,7 @@ def BFS(g, s):
     print("Path : ", path)
                 
 def test_BFS():
-    g = Graph(4)
+    g = graph(4)
     
     g.addEdge(0, 1)
     g.addEdge(0, 2)

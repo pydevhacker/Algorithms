@@ -2,7 +2,7 @@
 Use topological sort
 '''
 
-from Graph import Graph
+from Graph import graph
 
 def topologicalSort(g):
 
@@ -49,7 +49,7 @@ def longestPath(g, s):
 
     print(dist)
 
-g = Graph()
+g = graph()
 g.addEdge(0, 1, 5)
 g.addEdge(0, 2, 3)
 g.addEdge(1, 3, 6)

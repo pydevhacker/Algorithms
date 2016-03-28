@@ -7,7 +7,7 @@ DFS + check if no back edge is present
 The condition for an edge (u, v) to be a bridge is, “low[v] > disc[u]”.
 '''
 
-from Graph import Graph
+from Graph import graph
 
 time = 0
 
@@ -45,7 +45,7 @@ def bridge(g):
     print(bridges)
 
 
-g1 = Graph(5)
+g1 = graph(5)
 g1.addEdge(1, 0)
 g1.addEdge(0, 2)
 g1.addEdge(2, 1)
@@ -54,7 +54,7 @@ g1.addEdge(3, 4)
 bridge(g1)
 
 
-g2 = Graph(4)
+g2 = graph(4)
 g2.addEdge(0, 1)
 g2.addEdge(1, 2)
 g2.addEdge(2, 3)

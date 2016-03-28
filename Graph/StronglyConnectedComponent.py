@@ -18,7 +18,7 @@ low = this array based on the back edge. it gives the discovery time of the node
 tree a -> b -> c -> d => b has sub tree c, d, if any of the node c, d has a back edge that connects a then the low value of b will be disc time of a.
 '''
 
-from Graph import Graph
+from Graph import graph
 
 time = 0
 scc = []
@@ -72,7 +72,7 @@ def strongly_connected_component(g):
     return scc
 
 print("Graph 1")
-g1 = Graph(5)
+g1 = graph(5)
 g1.addEdge(1, 0)
 g1.addEdge(0, 2)
 g1.addEdge(2, 1)
@@ -81,14 +81,14 @@ g1.addEdge(3, 4)
 print(strongly_connected_component(g1))
 
 print("Graph 2")
-g2 = Graph(4)
+g2 = graph(4)
 g2.addEdge(0, 1)
 g2.addEdge(1, 2)
 g2.addEdge(2, 3)
 print(strongly_connected_component(g2))
 
 print("Graph 3")
-g3 = Graph(7)
+g3 = graph(7)
 g3.addEdge(0, 1)
 g3.addEdge(1, 2)
 g3.addEdge(2, 0)
@@ -100,7 +100,7 @@ g3.addEdge(4, 5)
 print(strongly_connected_component(g3))
 
 print("Graph 4")
-g4 = Graph(11)
+g4 = graph(11)
 g4.addEdge(0,1)
 g4.addEdge(0,3)
 g4.addEdge(1,2)
