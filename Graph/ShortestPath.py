@@ -6,9 +6,7 @@ Created on Mar 10, 2016
 
 max_int = 10**10
 
-
 def minDistance(dist, spt):
-    
     min = max_int
     min_idx = -1
     
